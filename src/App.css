@@ -1,0 +1,96 @@
+body {
+  margin: 40px;
+}
+
+.root {
+  /* margin: 400px; */
+}
+
+.weather-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  margin: 10px;
+  }
+
+.weather-wrapper .tabs {
+  background-color: white;
+}
+
+.weather-wrapper div {
+  text-align: center;
+  grid-gap: 10px;
+  background-color: #e8f4f8;
+  }
+  
+.wrapper {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  }
+
+.today {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  align-content: space-around;
+  }
+
+/**
+ * Tabs
+ */
+.tabs {
+	display: flex;
+	flex-wrap: wrap; 
+}
+.tabs label {
+	order: 1; 
+	display: block;
+	padding: 1rem 2rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+  font-weight: bold;
+  transition: background ease 0.2s;
+}
+.tabs .tab {
+  order: 99; 
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+  padding: 1rem;
+  background: #fff;
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+
+.tabs input[type="radio"]:checked + label {
+	color: #B1D4E0;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+	display: block;
+}
+
+/**
+ * Weather Card
+ */
+
+.flex-container {
+  display: flex;
+  /* width: 50%; */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+ }
+
+.flex-child {
+  flex: 0 0 auto;
+  width: 15%;
+ }
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+.box {
+  border: 2px solid white
+}
