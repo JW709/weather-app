@@ -1,9 +1,9 @@
 body {
   margin: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .root {
-  /* margin: 400px; */
 }
 
 .weather-wrapper {
@@ -44,7 +44,7 @@ body {
 .tabs label {
 	order: 1; 
 	display: block;
-	padding: 1rem 2rem;
+	padding: 1rem;
 	margin-right: 0.2rem;
 	cursor: pointer;
   font-weight: bold;
@@ -58,6 +58,7 @@ body {
   padding: 1rem;
   background: #fff;
 }
+
 .tabs input[type="radio"] {
 	display: none;
 }
@@ -76,7 +77,6 @@ body {
 
 .flex-container {
   display: flex;
-  /* width: 50%; */
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -92,5 +92,10 @@ body {
 }
 
 .box {
+  border-radius: 5px;
   border: 2px solid white
+}
+
+.condition-text {
+  margin: 5px;
 }

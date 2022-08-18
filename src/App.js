@@ -1,7 +1,5 @@
-import './App.css';
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Grid, TextField, Tabs, Tab, Typography} from '@mui/material'
+import './styles.css';
+import React from 'react';
 import WeatherData from './WeatherData';
 
 function App() {
