@@ -1,9 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Box, Card, Grid, Paper, TextField, Tabs, Tab} from '@mui/material'
-import TabPanel from '@mui/lab/TabPanel';
-import TabContext from '@mui/lab/TabContext';
 import WeatherCard from './WeatherCard';
 
 const WeatherData = () => {
