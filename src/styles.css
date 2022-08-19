@@ -1,101 +1,96 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 40px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  left: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:  #e8f4f8;
 }
-
-.root {
-}
-
 .weather-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(100px, auto);
-  margin: 10px;
-  }
-
-.weather-wrapper .tabs {
-  background-color: white;
+ 
 }
-
 .weather-wrapper div {
   text-align: center;
-  grid-gap: 10px;
-  background-color: #e8f4f8;
-  }
-  
+}
 .wrapper {
   display: grid;
   grid-auto-rows: minmax(100px, auto);
-  }
-
+  width:100%;
+}
 .today {
+  background-color: #e8f4f8;
   grid-column-start: 1;
   grid-column-end: 5;
   align-content: space-around;
-  }
-
+}
+.forecast {
+  background-color: #e8f4f8;
+  padding: 10px;
+}
 /**
- * Tabs
- */
+   * Tabs
+*/
+
 .tabs {
-	display: flex;
-	flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
 }
 .tabs label {
-	order: 1; 
-	display: block;
-	padding: 1rem;
-	margin-right: 0.2rem;
-	cursor: pointer;
-  font-weight: bold;
+  order: 1;
+  display: block;
+  margin: 0.2rem;
+  padding: 10px;
+  cursor: pointer;
   transition: background ease 0.2s;
+  justify-content: space-evenly;
 }
 .tabs .tab {
-  order: 99; 
+  order: 99;
   flex-grow: 1;
-	width: 100%;
-	display: none;
-  padding: 1rem;
+  width: 100%;
+  border: 2px solid white;
+  border-radius: 5px;
+  display: none;
   background: #fff;
 }
-
 .tabs input[type="radio"] {
-	display: none;
+  display: none;
 }
-
 .tabs input[type="radio"]:checked + label {
-	color: #B1D4E0;
+  color: #B1D4E0;
 }
-
 .tabs input[type="radio"]:checked + label + .tab {
-	display: block;
+  display: block;
 }
 
 /**
- * Weather Card
- */
+   * Forecast Card
+*/
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
- }
-
+}
 .flex-child {
   flex: 0 0 auto;
   width: 15%;
- }
-
+}
 .flex-child:first-child {
   margin-right: 20px;
 }
-
 .box {
   border-radius: 5px;
-  border: 2px solid white
+  border: 2px solid white;
 }
-
 .condition-text {
   margin: 5px;
 }

@@ -1,12 +1,10 @@
 import React from 'react';
-import { Box, Card, Grid, Paper, TextField, Tabs, Tab, Typography} from '@mui/material'
+import { Typography} from '@mui/material'
 import moment from 'moment-timezone';
 
 
 const WeatherCard = ({ data }) => {
-
-    console.log(data)
- 
+   
     return (
         <>
             <div className="wrapper">
@@ -16,22 +14,22 @@ const WeatherCard = ({ data }) => {
                             <div className="flex-container">
 
                                 <div className="flex-child left"> 
-                                    <img id="wicon" src={data.data.current.condition.icon} alt="Weather icon" />
+                                    <img id="wicon" src={data.current.condition.icon} alt="Weather icon" />
                                 </div>
                                         
                                 <div className="flex-child right">
-                                    {data.data.current.temp_c}&#8451;
+                                    {data.current.temp_c}&#8451;
                                 </div>
                             </div>
 
-                            <div className="condition-text">{data.data.current.condition.text}</div>
+                            <div className="condition-text">{data.current.condition.text}</div>
                     </div>
 
-                    {data.data.forecast.forecastday.map((day, index) => {
+                    {data.forecast.forecastday.map((day, index) => {
                         return (
                             <>
                            
-                                <div className="flex-container box" key={index}>
+                                <div className="flex-container box forecast" key={index}>
                                     <div>
                                         {moment(day.date).format("ddd")}
                                     </div>
