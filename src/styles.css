@@ -4,13 +4,14 @@
 body {
   margin: 40px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: fixed;
+  position: absolute;
   left: 30%;
-  top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%, -50%);
   background-color:  #e8f4f8;
 }
 .weather-wrapper {
+  margin: auto;
+  vertical-align: middle;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(100px, auto);
@@ -20,7 +21,7 @@ body {
   text-align: center;
 }
 .wrapper {
-  display: grid;
+  display: flex;
   grid-auto-rows: minmax(100px, auto);
   width:100%;
 }
@@ -43,7 +44,7 @@ body {
   flex-wrap: wrap;
 }
 .tabs label {
-  order: 1;
+  order: 0;
   display: block;
   margin: 0.2rem;
   padding: 10px;
@@ -69,6 +70,13 @@ body {
 .tabs input[type="radio"]:checked + label + .tab {
   display: block;
 }
+
+#tab0:checked ~ .content .tab0,
+#tab1:checked ~ .content .tab1,
+#tab2:checked ~ .content .tab2 {
+  display: block;
+}
+
 
 /**
    * Forecast Card
