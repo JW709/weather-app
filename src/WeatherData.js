@@ -18,7 +18,7 @@ const WeatherData = () => {
 
     for (let city of locations) {
       promises.push(
-        await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=9da076a1d46c4a6ba21205320221708&q=${city.name}&days=4&aqi=no`).then(response => {
+        await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=9da076a1d46c4a6ba21205320221708&q=${city.name}&days=4&aqi=no`).then(response => {
           data.push(response);
         })
       )
