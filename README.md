@@ -1,8 +1,9 @@
 # Weather API Application
 
 This project uses the WeatherAPI to retrieve real time current and forecasted weather for 3 cities: Toronto, Vancouver, and London. 
-TODO: Add server layer to pass data to frontend
-TODO: Add a search bar so user can seach and save favourite cities
+- TODO: Add server layer to pass data to frontend
+- TODO: Add a search bar so user can seach and save favourite cities
+- TODO: Organize folder structure
 
 ## Available Scripts
 
